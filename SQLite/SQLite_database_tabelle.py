@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import sqlite3
 
 
@@ -96,4 +96,4 @@ def main():
 
 if __name__ == "__main__":
     main()
->>>>>>> 899bb8cfec7a59e6c5d5ec26bab791498ebe95fa
+
