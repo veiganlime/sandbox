@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dccfa9f3-9ac0-4fc0-b8ef-76d61ad7454e" name="Changes" comment="Tabelle erzeugen und Tabelleneinträge vornehmen">
-      <change afterPath="$PROJECT_DIR$/praktukum_python/pyuebung4_a2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/praktukum_python" beforeDir="false" afterPath="$PROJECT_DIR$/praktukum_python" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/praktukum_python/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/praktukum_python/README.md" afterDir="false" />
     </list>
     <list id="4d54474d-1d22-42d7-9556-7c46ba462148" name="Changes1" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +21,7 @@
     <option name="BRANCH" value="future-brunch" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/praktukum_python" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -68,8 +64,8 @@
       <recent name="D:\workspace_python\gaussscheEliminationsverfahren\venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pyuebung4_a1">
-    <configuration name="pyuebung2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="workspace_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -77,11 +73,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/praktukum_python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Database application" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/praktukum_python/pyuebung2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Database application/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.pyuebung4_a1" />
         <item itemvalue="Python.pyuebung3_a3" />
         <item itemvalue="Python.pyuebung3_a2" />
         <item itemvalue="Python.pyuebung3" />
-        <item itemvalue="Python.pyuebung2" />
       </list>
     </recent_temporary>
   </component>
