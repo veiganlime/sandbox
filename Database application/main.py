@@ -3,7 +3,7 @@ import sqlite3
 
 root = Tk()
 root.title('CoinDB')
-root.geometry("400x400")
+root.geometry("400x600")
 
 #Databases
 #Creating a database or connecting
@@ -16,6 +16,55 @@ c = conn.cursor()
         prise,
         anzahl
         )""")'''
+
+#Creating function update
+def update():
+
+    editor_window = Tk()
+    editor_window.title('Bearbeitung')
+    editor_window.geometry("400x600")
+
+    # Creating a database or connecting
+    conn = sqlite3.connect('coins_db.db')
+    # Creating cursor
+    c = conn.cursor()
+
+    # Select from table
+    eintrag_ID = delete_box.get()
+    c.execute("SELECT * FROM coins WHERE oid = " + eintrag_ID)
+    eintraege = c.fetchall()
+
+
+    # Creating Text Boxes
+    name_editor = Entry(editor_window, width=30)
+    name_editor.grid(row=0, column=1, padx=20)
+    price_editor = Entry(editor_window, width=30)
+    price_editor.grid(row=1, column=1, padx=20)
+    anzahl_editor = Entry(editor_window, width=30)
+    anzahl_editor.grid(row=2, column=1, padx=20)
+
+    # Creating text box labels
+    name_editor_lable = Label(editor_window, text="Coin")
+    name_editor_lable.grid(row=0, column=0)
+    price_editor_lable = Label(editor_window, text="Price")
+    price_editor_lable.grid(row=1, column=0)
+    anzahl_editor_lable = Label(editor_window, text="Anzahl")
+    anzahl_editor_lable.grid(row=2, column=0)
+
+    # loop thru results
+    for eintrag in eintraege:
+        name_editor.insert(0, eintrag[0])
+        price_editor.insert(0, eintrag[1])
+        anzahl_editor.insert(0, eintrag[2])
+
+    # Creating button Submit
+    submit_editor_btn = Button(editor_window, text="Eintrag hinzufügen", command=submit)
+    submit_editor_btn.grid(row=3, column=0, columnspan=2, pady=10, padx=10, ipadx=100)
+
+    # Commiting changes
+    conn.commit()
+    # close Connection
+    conn.close()
 #Creating function delete
 def delete():
     # Creating a database or connecting
@@ -43,6 +92,7 @@ def query():
     eintraege_ausgabe = ''
     for eintrag in eintraege:
         eintraege_ausgabe += str(eintrag[0]) + " " + "\t" + str(eintrag[1]) + " " + "\t" + str(eintrag[2]) + " " + "\t" + str(eintrag[3]) +  "\n"
+
     query_lable = Label(root, text=eintraege_ausgabe)
     query_lable.grid(row=5, column=0, columnspan=2)
 
@@ -90,7 +140,7 @@ price_lable = Label(root, text="Price")
 price_lable.grid(row=1, column=0)
 anzahl_lable = Label(root, text="Anzahl")
 anzahl_lable.grid(row=2, column=0)
-delete_box_label = Label(root, text="ID zu löschen")
+delete_box_label = Label(root, text="ID zu bearbeiten")
 delete_box_label.grid(row=7,column=0)
 
 # Creating button Submit
@@ -104,6 +154,10 @@ query_btn.grid(row=4, column=0, columnspan=2,pady=10, padx=10, ipadx=93)
 #Creating a delete button
 delte_btn = Button(root, text="Eintrag löschen", command=delete)
 delte_btn.grid(row=6, column=0, columnspan=2,pady=10, padx=10, ipadx=110)
+
+#Creating a update button
+update_btn = Button(root, text="Eintrag bearbeiten", command=update)
+update_btn.grid(row=8, column=0, columnspan=2,pady=10, padx=10, ipadx=110)
 #Commiting changes
 conn.commit()
 #close Connection
