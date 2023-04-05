@@ -16,10 +16,38 @@ c = conn.cursor()
         prise,
         anzahl
         )""")'''
+#Creating function edit
+def edit():
+    # Creating a database or connecting
+    conn = sqlite3.connect('coins_db.db')
+    # Creating cursor
+    c = conn.cursor()
+    record_id = delete_box.get()
+    c.execute("""UPDATE coins SET
+        name = :name,
+        prise = :prise,
+        anzahl = :anzahl 
+        
+        WHERE oid = :oid """,
+        {
+        'name': name_editor.get(),
+        'prise': price_editor.get(),
+        'anzahl': anzahl_editor.get(),
+        'oid': record_id
+        })
+
+
+    # Commiting changes
+    conn.commit()
+    # close Connection
+    conn.close()
+
+    editor_window.destroy()
+
 
 #Creating function update
 def update():
-
+    global editor_window
     editor_window = Tk()
     editor_window.title('Bearbeitung')
     editor_window.geometry("400x600")
@@ -34,6 +62,10 @@ def update():
     c.execute("SELECT * FROM coins WHERE oid = " + eintrag_ID)
     eintraege = c.fetchall()
 
+    # Creating Global Variables for text box name
+    global name_editor
+    global price_editor
+    global anzahl_editor
 
     # Creating Text Boxes
     name_editor = Entry(editor_window, width=30)
@@ -58,7 +90,7 @@ def update():
         anzahl_editor.insert(0, eintrag[2])
 
     # Creating button Submit
-    submit_editor_btn = Button(editor_window, text="Eintrag hinzufügen", command=submit)
+    submit_editor_btn = Button(editor_window, text="Eintrag hinzufügen", command=edit)
     submit_editor_btn.grid(row=3, column=0, columnspan=2, pady=10, padx=10, ipadx=100)
 
     # Commiting changes
