@@ -9,6 +9,7 @@ Es ist eine App zu erstellen, die folgende Themen berührt:
 - Folgende Exceptions sind zu behandeln
   - leere Eingabe
   - string anstatt int bzw. float
-  - 
+  
+![img.png](img.png)
 
 
