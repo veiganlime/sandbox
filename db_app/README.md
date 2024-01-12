@@ -1,6 +1,6 @@
 Es ist eine App zu erstellen, die folgende Themen berührt:
 - Erstellung von Database 
-- Erstellung von GUI
+- Erstellung von GUI mit TKinter Framework
 - Folgende Funktionen sind zu implementieren
   - Einträge speichern 
   - Einträge anzeigen
