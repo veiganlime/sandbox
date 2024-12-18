@@ -1,0 +1,34 @@
+{
+    "custom": {
+        "general":{
+                "navigation": {
+                "home": "Home",
+                "profile": "Profile",
+                "settings": "Settings",
+                "feedback":"Feedback"
+            },
+            "sales": {
+                "customer": "Customer",
+                "customer_name": "Customer name",
+                "customer_id": "Customer ID"
+            }
+        }
+    },
+    "buttons": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "send": "Send",
+      "update": "Update"
+    },
+    "messages": {
+      "welcome": "Welcome",
+      "error": "Error",
+      "success": "Success"
+    },
+    "feedback-form": {
+      "name": "Name",
+      "email": "E-mail",
+      "response_body": "Body"
+    }
+  }

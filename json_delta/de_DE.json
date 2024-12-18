@@ -1,0 +1,24 @@
+{
+    "custom": {
+        "general":{
+                "navigation": {
+                "home": "Startseite",
+                "profile": "Profil",
+                "settings": "Einstellugen",
+                "feedback":"Rückmeldung"
+            }
+        }
+    },
+    "buttons": {
+      "save": "Specihern",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "send": "Senden",
+      "update": "Aktualisieren"
+    },
+    "messages": {
+      "welcome": "Willkomen",
+      "error": "Fehler",
+      "success": "Erfolgreich"
+    }
+  }
