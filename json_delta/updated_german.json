@@ -26,7 +26,7 @@
     "error": "Fehler",
     "success": "Erfolgreich"
   },
-  "feedback_form": {
+  "feedback-form": {
     "name": "Name",
     "email": "E-mail",
     "response_body": "Body"
