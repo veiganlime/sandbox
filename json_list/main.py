@@ -1,5 +1,7 @@
 import json
 from datetime import date
+import tkinter as tk
+from tkinter import simpledialog, messagebox
 
 def load_json(filename):
     with open(filename, 'r', encoding='utf-8') as file:
@@ -18,11 +20,11 @@ def main():
     for item in data:
         #print(item['ID'], item['Status'],  item['Fälligkeitsdatum'])
         if item['Fälligkeitsdatum'] == today:
-            
+
             print(f'''Die Berechtigung von {item['User']} wird entfernt!''')
             data.remove(item)
 
-    save_json(data, 'json_list/list_updated.json')
+    # save_json(data, 'json_list/list_updated.json')
 
 
 if __name__ == '__main__':
