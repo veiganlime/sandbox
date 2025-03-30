@@ -1,13 +1,24 @@
 .appContainer {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
+  position: relative; 
 }
 
 .content {
-  margin-right: 250px;
-  padding: 20px;
-  transition: margin-right 0.3s ease;
+  flex: 1;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  margin-left: 250px; 
+  transition: margin-left 0.3s ease; 
 }
 
-.sidebar.hidden ~ .content {
-  margin-right: 0;
+
+.content.collapsed {
+  margin-left: 60px; 
 }

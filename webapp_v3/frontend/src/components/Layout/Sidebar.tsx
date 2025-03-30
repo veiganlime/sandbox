@@ -6,6 +6,27 @@ const Sidebar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const { currentPage, setCurrentPage } = useNavigation();
 
+  // Add/remove collapsed class to content area
+  React.useEffect(() => {
+    const content = document.querySelector(`.${styles.content}`);
+    if (content) {
+      if (!isVisible) {
+        content.classList.add('collapsed');
+      } else {
+        content.classList.remove('collapsed');
+      }
+    }
+
+    const navBrand = document.querySelector(`.${styles.navBrand}`);
+    if (navBrand) {
+      if (!isVisible) {
+        navBrand.classList.add('collapsed');
+      } else {
+        navBrand.classList.remove('collapsed');
+      }
+    }
+  }, [isVisible]);
+
   return (
     <>
       <button 

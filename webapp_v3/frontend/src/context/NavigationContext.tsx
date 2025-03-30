@@ -1,20 +1,18 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
-type Page = 'home' | 'dashboard' | 'users' | 'analytics';
-
-interface NavigationContextType {
-  currentPage: Page;
-  setCurrentPage: (page: Page) => void;
-}
+type NavigationContextType = {
+  currentPage: string;
+  setCurrentPage: (page: string) => void;
+};
 
 const NavigationContext = createContext<NavigationContextType>({
-  currentPage: 'dashboard',
-  setCurrentPage: () => {}
+  currentPage: 'home',
+  setCurrentPage: () => {},
 });
 
-export const NavigationProvider = ({ children }: { children: ReactNode }) => {
-  const [currentPage, setCurrentPage] = useState<Page>('dashboard');
-  
+export const NavigationProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
+  const [currentPage, setCurrentPage] = useState('home');
+
   return (
     <NavigationContext.Provider value={{ currentPage, setCurrentPage }}>
       {children}

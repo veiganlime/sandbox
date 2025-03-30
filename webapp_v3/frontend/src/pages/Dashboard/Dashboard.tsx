@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Dashboard.module.css';
 
-const MainPage = () => {
+const Dashboard = () => {
   return (
     <div className={styles.pageLayout}>
       {/* Container 1: Portfolio Overview */}
@@ -39,4 +39,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default Dashboard;
