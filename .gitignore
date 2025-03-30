@@ -2,3 +2,6 @@
 scrape/
 venv
 copilot/
+webapp_v3/venv
+webapp_v3/node_modules
+webapp_v3/__pycache__
