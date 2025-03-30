@@ -1,0 +1,59 @@
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #2c3e50;
+    color: white;
+    transition: transform 0.3s ease;
+    z-index: 100;
+    padding: 20px 0;
+  }
+  
+  .hidden {
+    transform: translateX(100%);
+  }
+  
+  .navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navItem {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+  
+  .navItem:hover {
+    background: #34495e;
+  }
+  
+  .active {
+    background: #1e2b38;
+    border-left: 3px solid #6200ee;
+  }
+  
+  .toggleButton {
+    position: fixed;
+    right: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2c3e50;
+    color: white;
+    border: none;
+    width: 24px;
+    height: 48px;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    z-index: 101;
+    transition: right 0.3s ease;
+  }
+  
+  .hiddenButton {
+    right: 0;
+  }

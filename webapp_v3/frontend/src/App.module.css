@@ -1,0 +1,13 @@
+.appContainer {
+  position: relative;
+}
+
+.content {
+  margin-right: 250px;
+  padding: 20px;
+  transition: margin-right 0.3s ease;
+}
+
+.sidebar.hidden ~ .content {
+  margin-right: 0;
+}
