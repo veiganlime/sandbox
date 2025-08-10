@@ -1,0 +1,20 @@
+services:
+  kafka:
+    image: bitnami/kafka:latest          # 3.7.x – KRaft-fähig
+    container_name: kafka
+    ports:
+      - "9092:9092"                      # außen ↔︎ innen gleicher Port
+    environment:
+      # ------- KRaft Single Node -------
+      KAFKA_CFG_NODE_ID: 1
+      KAFKA_CFG_PROCESS_ROLES: broker,controller
+      # Controller bekommt eigenen internen Port 9093
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER   # <— **NEU**
+
+      # ------- Listener-Setup ----------
+      KAFKA_CFG_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
+      ALLOW_PLAINTEXT_LISTENER: "yes"
+      KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "true" 
